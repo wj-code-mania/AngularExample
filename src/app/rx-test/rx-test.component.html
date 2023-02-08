@@ -1,0 +1,12 @@
+<div class="Wrapper">
+  <img *ngIf="currentRandomUser.picture" class="photo" [src]='currentRandomUser.picture ? currentRandomUser.picture.medium : ""' />
+
+  <div class="name" *ngIf="currentRandomUser.name">
+    {{ currentRandomUser.name && (currentRandomUser.name.first + ' ' +  currentRandomUser.name.last) }}
+  </div>
+
+  <div class="birthday" *ngIf="currentRandomUser.dob">
+    {{ currentRandomUser.dob.date }}
+  </div>
+  
+</div>
